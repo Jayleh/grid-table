@@ -11,7 +11,7 @@ import {
   ColumnChooser,
   Grid,
   DragDropProvider,
-  Table,
+  VirtualTable,
   TableHeaderRow,
   TableColumnReordering,
   TableColumnResizing,
@@ -37,6 +37,8 @@ class App extends Component {
     columnOrder: [],
     hiddenColumnNames: [],
     searchValue: '',
+    totalCount: this.props.numberRowsToGenerate,
+    loading: true,
   }
 
   async componentDidMount() {
@@ -74,6 +76,8 @@ class App extends Component {
       columnOrder,
       searchValue,
       hiddenColumnNames,
+      totalCount,
+      loading,
     } = this.state
     return (
       <Paper>
@@ -88,7 +92,7 @@ class App extends Component {
           <IntegratedFiltering />
           <IntegratedSelection />
           <IntegratedSorting />
-          <Table />
+          <VirtualTable height={830}/>
           <TableColumnReordering
             order={columnOrder}
             onOrderChange={this.changeColumnOrder}
