@@ -7,13 +7,16 @@ import reducers from './reducers'
 import Table from './components/Table'
 
 const VIRTUAL_PAGE_SIZE = 50
-const numberRowsToGenerate = 2750
+const numberRowsToGenerate = 5000
 const fields = [
   { field: 'id' },
   { field: 'date' },
   { field: 'firstName' },
   { field: 'lastName' },
   { field: 'email' },
+  { field: 'companyName' },
+  { field: 'street' },
+  { field: 'zipCode' },
 ]
 
 const store = createStore(reducers)

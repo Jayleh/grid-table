@@ -92,7 +92,7 @@ class App extends Component {
           <IntegratedFiltering />
           <IntegratedSelection />
           <IntegratedSorting />
-          <VirtualTable height={830}/>
+          <VirtualTable height={830} />
           <TableColumnReordering
             order={columnOrder}
             onOrderChange={this.changeColumnOrder}
@@ -101,7 +101,7 @@ class App extends Component {
             columnWidths={columnWidths}
             onColumnWidthsChange={this.changeColumnWidths}
           />
-          <TableSelection />
+          <TableSelection showSelectAll />
           <TableColumnVisibility
             hiddenColumnNames={hiddenColumnNames}
             onHiddenColumnNamesChange={this.hiddenColumnNamesChange}

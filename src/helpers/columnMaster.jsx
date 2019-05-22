@@ -8,6 +8,9 @@ const columnLookup = {
   firstName: { name: 'firstName', title: 'First Name' },
   lastName: { name: 'lastName', title: 'Last Name' },
   email: { name: 'email', title: 'Email' },
+  companyName: { name: 'companyName', title: 'Company' },
+  street: { name: 'street', title: 'Stree' },
+  zipCode: { name: 'zipCode', title: 'Zipcode' },
 }
 
 export const generateColumns = fields => {
